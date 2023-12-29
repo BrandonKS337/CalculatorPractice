@@ -8,6 +8,7 @@ function CalculatorUI() {
   const [previousValue, setPreviousValue] = useState(null);
   const [isScientificOpen, setIsScientificOpen] = useState(false); // state for special operations toggle
   const [animationClass, setAnimationClass] = useState(""); // new animation state
+  const [history, setHistory] = useState(""); // new state for tracking calculation entries.
 
   //handler for toggling scientific ops open/close
   const handleToggleSidebar = () => {
@@ -21,6 +22,7 @@ function CalculatorUI() {
   const handleOperationClick = (op) => {
     setOperation(op);
     setPreviousValue(value);
+    setHistory(`${value} ${op}`); //updates the history
     setValue("");
   };
 
@@ -111,7 +113,10 @@ function CalculatorUI() {
   return (
     <>
       <div className="calculatorWrapper">
-        <div className="display">{value}</div>
+        <div className="display">
+          <div className="history">{history}</div>
+          <div className="currentVal">{value}</div>
+        </div>
         <div className="keys">
           <button onClick={handleClearClick}>C</button>
           {createDigits()}
