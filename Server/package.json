@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonKS337/CalculatorPractice.git"
+  },
+  "author": "BrandonKS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrandonKS337/CalculatorPractice/issues"
+  },
+  "homepage": "https://github.com/BrandonKS337/CalculatorPractice#readme",
+  "description": ""
+}
